@@ -21,7 +21,7 @@ struct TelemetryState
 	/// </summary>
 	struct Channels
 	{
-		// common
+		#pragma region Common
 
 		/// <summary>
 		/// Represents the current game time.
@@ -35,7 +35,9 @@ struct TelemetryState
 		/// </summary>
 		scs_s32_t next_rest_stop;
 
-		// truck
+		#pragma endregion
+
+		#pragma region Truck
 		
 		/// <summary>
 		/// Represents the current truck speed.
@@ -138,7 +140,9 @@ struct TelemetryState
 		/// </summary>
 		scs_float_t truck_navigation_speed_limit;
 
-		// trailer
+		#pragma endregion
+
+		#pragma region Trailer
 
 		/// <summary>
 		/// Represents wether a trailer is connected to the vehicle.
@@ -164,13 +168,17 @@ struct TelemetryState
 		/// </summary>
 		scs_float_t trailer_wear_wheels;
 
-		// job
+		#pragma endregion
+
+		#pragma region Job
 
 		/// <summary>
 		/// Represents the current job cargo damage.
 		/// SCS_TELEMETRY_JOB_CHANNEL_cargo_damage
 		/// </summary>
 		scs_float_t job_cargo_damage; 
+
+		#pragma endregion
 
 	} channels;
 
@@ -179,7 +187,7 @@ struct TelemetryState
 	/// </summary>
 	struct Events {
 
-		// job
+		#pragma region Job
 
 		/// <summary>
 		/// Represents the timestamp for the last job event.
@@ -227,7 +235,9 @@ struct TelemetryState
 		/// </summary>
 		scs_u32_t job_delivery_time;
 
-		// fine
+		#pragma endregion
+
+		#pragma region Fine
 
 		/// <summary>
 		/// Represents the timestamp for the last fine event.
@@ -246,6 +256,8 @@ struct TelemetryState
 		/// </summary>
 		scs_s64_t fine_amount;
 
+		#pragma endregion
+
 	} events;
 
 	/// <summary>
@@ -253,7 +265,7 @@ struct TelemetryState
 	/// </summary>
 	struct Configs {
 
-		// truck
+		#pragma region Truck
 
 		/// <summary>
 		/// Representing the current truck's brand id.
@@ -291,7 +303,9 @@ struct TelemetryState
 		/// </summary>
 		scs_float_t truck_adblue_capacity;
 
-		// trailer
+		#pragma endregion
+
+		#pragma region Trailer
 
 		/// <summary>
 		/// Representing the current trailer's id.
@@ -317,7 +331,9 @@ struct TelemetryState
 		/// </summary>
 		char trailer_name[32];
 
-		// job
+		#pragma endregion
+
+		#pragma region Job
 
 		/// <summary>
 		/// Represents the current job's cargo id.
@@ -432,6 +448,8 @@ struct TelemetryState
 		/// SCS_TELEMETRY_CONFIG_ATTRIBUTE_special_job
 		/// </summary>
 		bool job_is_special_job;
+
+	#pragma endregion
 
 	} configs;
 };

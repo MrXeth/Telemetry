@@ -1,7 +1,7 @@
-#include "../header/pch.h"
-#include "../header/Telemetry.h"
-#include "../header/Channels.h"
-#include "../header/Events.h"
+#include "pch.h"
+#include "Telemetry.h"
+#include "Channels.h"
+#include "Events.h"
 
 #define REGISTER_CHANNEL(channel, name, type) \
 versionParams->register_for_channel(SCS_TELEMETRY_##channel, SCS_U32_NIL, SCS_VALUE_TYPE_##type, SCS_TELEMETRY_CHANNEL_FLAG_none, \

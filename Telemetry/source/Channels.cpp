@@ -1,5 +1,5 @@
-#include "../header/pch.h"
-#include "../header/Channels.h"
+#include "pch.h"
+#include "Channels.h"
 #include <cassert>
 
 SCSAPI_VOID channels::telemetryStore_u32(const scs_string_t, const scs_u32_t, const scs_value_t* const value, const scs_context_t context)

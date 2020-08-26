@@ -1,5 +1,5 @@
-#include "../header/pch.h"
-#include "../header/Logger.h"
+#include "pch.h"
+#include "Logger.h"
 
 Logger::Logger(scs_log_t gameLog)
 {

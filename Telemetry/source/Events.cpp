@@ -1,5 +1,5 @@
-#include "../header/pch.h"
-#include "../header/Events.h"
+#include "pch.h"
+#include "Events.h"
 
 /// <summary>
 /// Helper macro for finding a configuration attribute.

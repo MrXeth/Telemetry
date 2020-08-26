@@ -111,8 +111,8 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;TELEMETRY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Create</PrecompiledHeader>
-      <PrecompiledHeaderFile>..\header\pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\Stefan\source\repos\Telemetry\Telemetry\source;C:\Users\Stefan\source\repos\Telemetry\Telemetry\header;C:\Users\Stefan\source\repos\Telemetry\scs_sdk_1_16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\scs_sdk_1_16\include;$(ProjectDir)header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <Link>
@@ -150,8 +150,8 @@
       <PreprocessorDefinitions>NDEBUG;TELEMETRY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Create</PrecompiledHeader>
-      <PrecompiledHeaderFile>..\header\pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\Stefan\source\repos\Telemetry\Telemetry\source;C:\Users\Stefan\source\repos\Telemetry\Telemetry\header;C:\Users\Stefan\source\repos\Telemetry\scs_sdk_1_16\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\scs_sdk_1_16\include;$(ProjectDir)header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <Link>

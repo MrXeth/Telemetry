@@ -1,5 +1,5 @@
-#include "../header/pch.h"
-#include "../header/SharedMemory.h"
+#include "pch.h"
+#include "SharedMemory.h"
 
 SharedMemory::SharedMemory()
 {

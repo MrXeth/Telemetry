@@ -14,7 +14,7 @@ private:
 	/// version params pointer 
 	/// </summary>
 	const scs_telemetry_init_params_v100_t* versionParams;
-	
+
 	/// <summary>
 	/// logger pointer
 	/// </summary>
