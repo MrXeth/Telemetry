@@ -12,7 +12,12 @@ struct TelemetryState
 	bool running;
 
 	/// <summary>
-	/// Represents the current game id
+	/// Represents the current api version.
+	/// </summary>
+	scs_u32_t apiVersion;
+
+	/// <summary>
+	/// Represents the current game id.
 	/// </summary>
 	char game_id[8];
 

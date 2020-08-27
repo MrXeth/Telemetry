@@ -3,6 +3,12 @@
 #include "Channels.h"
 #include "Events.h"
 
+/// <summary>
+/// Helper macro for registering a channel.
+/// </summary>
+/// <param name="channel">channel name</param>
+/// <param name="name">name of the attribute to bind to</param>
+/// <param name="type">datatype of the channel</param>
 #define REGISTER_CHANNEL(channel, name, type) \
 versionParams->register_for_channel(SCS_TELEMETRY_##channel, SCS_U32_NIL, SCS_VALUE_TYPE_##type, SCS_TELEMETRY_CHANNEL_FLAG_none, \
 channels::telemetryStore_##type, &channels.##name);
@@ -79,7 +85,7 @@ Telemetry::Telemetry(const scs_u32_t& version, const scs_telemetry_init_params_t
 		throw SCS_RESULT_generic_error;
 	}
 
-	registerChannels(versionParams, state);
+	registerChannels(version, versionParams, state);
 
 }
 
@@ -91,8 +97,9 @@ bool Telemetry::registerEvents(const scs_telemetry_init_params_v100_t* versionPa
 		versionParams->register_for_event(SCS_TELEMETRY_EVENT_gameplay, Events::telemetryGameplay, nullptr) == SCS_RESULT_ok;
 }
 
-void Telemetry::registerChannels(const scs_telemetry_init_params_v100_t* versionParams, TelemetryState& state)
+void Telemetry::registerChannels(const scs_u32_t& version, const scs_telemetry_init_params_v100_t* versionParams, TelemetryState& state)
 {
+	state.apiVersion = version;
 	strcpy_s(state.game_id, versionParams->common.game_id);
 
 	TelemetryState::Channels& channels = state.channels;

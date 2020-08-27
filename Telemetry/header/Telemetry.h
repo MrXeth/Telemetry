@@ -35,9 +35,10 @@ private:
 	/// <summary>
 	/// Helper function for registering channels.
 	/// </summary>
+	/// <param name="version">telemetry api version</param>
 	/// <param name="versionParams">version params</param>
 	/// <param name="state">Reference to the TelemetryState object to present all telemetry information.</param>
-	void registerChannels(const scs_telemetry_init_params_v100_t* versionParams, TelemetryState& state);
+	void registerChannels(const scs_u32_t&, const scs_telemetry_init_params_v100_t* versionParams, TelemetryState& state);
 
 public:
 	
